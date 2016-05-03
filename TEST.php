@@ -5,4 +5,4 @@
  * Date: 03/05/2016
  * Time: 12:31
  */
-echo "Hello World!!!";
+echo "Hello World!";
