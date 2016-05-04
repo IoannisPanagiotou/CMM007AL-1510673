@@ -35,7 +35,9 @@ include("dbconnect.php");
         </nav>
         <br><br>
         <content>
-            <form>
+            <?php if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            ?>
+            <form action="<? echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <table>
                     <tr>
                         <td>Entry Title:</td>
@@ -61,6 +63,23 @@ include("dbconnect.php");
                 <br>
                 <input type="submit" value="Submit" />
             </form>
+                <?
+            }
+            elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $entryTitle=$_POST["name"];
+                $entrySummary=$_POST["summary"];
+                $category=$_POST["category"];
+
+                $sql="INSERT INTO blogview (entryTitle, entrySummary, category) VALUES ('$entryTitle','$entrySummary','$category')";
+                if (mysqli_query($db, $sql)){
+                }else{
+                    echo "<br>Error: ".$sql."<br>".mysqli_error($db);
+                }
+                header("location: blog.php");
+            }
+            else{
+                header("location: index.php");
+            }?>
         </content>
         </div>
     </section>
