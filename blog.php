@@ -41,10 +41,10 @@ include("dbconnect.php");
                 $result = $db->query($sql_query);
                 while ($row = $result->fetch_array())
                 {
-                    $entryTitle=$row["name"];
-                    $entrySummary=$row["summary"];
+                    $entryTitle=$row["entryTitle"];
+                    $entrySummary=$row["entrySummary"];
                     $category=$row["category"];
-                    $submitter=$row["submittedBy"];
+                    $submitter=$row["submitter"];
                     echo "<li>{$entryTitle} {$entrySummary} {$category} {$submitter}</li>";
                 }
                 ?>
