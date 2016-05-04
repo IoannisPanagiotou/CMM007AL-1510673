@@ -52,9 +52,9 @@ include("dbconnect.php");
 
 
                 echo $category;
-                $sql2="SELECT * FROM blogview WHERE category='work'";
-                $result2=mysqli_query($db,$sql2);
-                if (mysqli_num_rows($result2)==1)
+                $sql="SELECT * FROM blogview WHERE category='$category'";
+                $result=mysqli_query($db,$sql);
+                if (mysqli_num_rows($result)==1)
                 {
                     header("location: blog.php?category=".$category."");
                 }else
