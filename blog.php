@@ -50,9 +50,8 @@ include("dbconnect.php");
 
                 $category=$_GET["category"];
 
-
                 echo $category;
-                echo $entryTitle;
+                
                 $sql2="SELECT * FROM blogview WHERE category='$category'";
                 $result2=mysqli_query($db,$sql2);
                 while ($row = $result2->fetch_array())
@@ -63,13 +62,6 @@ include("dbconnect.php");
                     $submitter=$row["submitter"];
                     echo "{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary}<br><hr />";
                 }
-                if ($category=="work"){
-                    echo $sql2;
-                    echo "<br>";
-                    echo "{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary}<br><hr />";
-                }
-
-
 
                 ?>
             </ul>
