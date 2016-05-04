@@ -21,7 +21,7 @@ include("dbconnect.php");
 <main class="grid-container">
 <section class="grid-33 tablet-grid-50 mobile-grid-100" id="maincontent">
     <header>
-        <h1>myBlog</h1>
+        <h1><a href="index.php">myBlog</a></h1>
         <h2>because the internet needs to know what I think</h2>
     </header>
     <nav>
