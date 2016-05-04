@@ -37,21 +37,12 @@ include("dbconnect.php");
         <content>
             <ul>
                 <?
-                $sql_query = "select * from blogview";
-                $result = $db->query($sql_query);
-                while ($row = $result->fetch_array())
-                {
-                    $entryTitle=$row["entryTitle"];
-                    $entrySummary=$row["entrySummary"];
-                    $category=$row["category"];
-                    $submitter=$row["submitter"];
-                    echo "{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary}<br><hr />";
-                }
+
 
                 $category=$_GET["category"];
 
                 echo $category;
-                
+                if (category=="work"){
                 $sql2="SELECT * FROM blogview WHERE category='$category'";
                 $result2=mysqli_query($db,$sql2);
                 while ($row = $result2->fetch_array())
@@ -62,6 +53,20 @@ include("dbconnect.php");
                     $submitter=$row["submitter"];
                     echo "{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary}<br><hr />";
                 }
+                }
+                else{
+                    $sql_query = "select * from blogview";
+                    $result = $db->query($sql_query);
+                    while ($row = $result->fetch_array())
+                    {
+                        $entryTitle=$row["entryTitle"];
+                        $entrySummary=$row["entrySummary"];
+                        $category=$row["category"];
+                        $submitter=$row["submitter"];
+                        echo "{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary}<br><hr />";
+                    }
+                }
+
 
                 ?>
             </ul>
