@@ -54,6 +54,7 @@ include("dbconnect.php");
                 $submitter=$_GET["submitter"];
 
                 echo $category;
+                echo $entryTitle;
                 $sql2="SELECT * FROM blogview WHERE category='$category'";
                 if ($category=="work"){
                     echo $sql2;
