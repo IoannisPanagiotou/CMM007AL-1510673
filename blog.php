@@ -48,7 +48,11 @@ include("dbconnect.php");
                     echo "{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary}<br><hr />";
                 }
 
+                $entryTitle=$_GET["entryTitle"];
+                $entrySummary=$_GET["entrySummary"];
                 $category=$_GET["category"];
+                $submitter=$_GET["submitter"];
+                
                 echo $category;
                 $sql2="SELECT * FROM blogview WHERE category='$category'";
                 if ($category=="work"){
