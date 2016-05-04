@@ -49,6 +49,7 @@ include("dbconnect.php");
                 }
 
                 $category=$GET_["category"];
+                echo $category;
                 $sql2="SELECT * FROM blogview WHERE category='$category'";
                 $result2=mysqli_query($db,$sql2);
                 if (mysqli_num_rows($result2)==1)
