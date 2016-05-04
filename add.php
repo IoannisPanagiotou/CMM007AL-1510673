@@ -69,8 +69,9 @@ include("dbconnect.php");
                 $entryTitle=$_POST["name"];
                 $entrySummary=$_POST["summary"];
                 $category=$_POST["category"];
+                $submitter=$_POST["submittedBy"];
 
-                $sql="INSERT INTO blogview (entryTitle, entrySummary, category) VALUES ('$entryTitle','$entrySummary','$category')";
+                $sql="INSERT INTO blogview (entryTitle, entrySummary, category, submitter) VALUES ('$entryTitle','$entrySummary','$category','$submitter')";
                 if (mysqli_query($db, $sql)){
                 }else{
                     echo "<br>Error: ".$sql."<br>".mysqli_error($db);
