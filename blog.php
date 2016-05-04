@@ -35,14 +35,20 @@ include("dbconnect.php");
         </nav>
         <br><br>
         <content>
-            <h3>Today at work by Adam</h3><br>
-            <h5>Work</h5><br>
-            <p>Today I went to work and did lots of very complicated coding things. I was very pleased that I managed to
-                finish them all</p><br>
-            <h3>University Lecturer by Brian</h3><br>
-            <h5>University</h5><br>
-            <p>This week in university I had an amazing lecture. I can't remember the name of the lecturer but he was really
-                really good.</p><br>
+            <ul>
+                <?
+                $sql_query = "select * from blogview";
+                $result = $db->query($sql_query);
+                while ($row = $result->fetch_array())
+                {
+                    $entryTitle=$row["name"];
+                    $entrySummary=$row["summary"];
+                    $category=$row["category"];
+                    $submitter=$row["submittedBy"];
+                    echo "<li>{$entryTitle} {$entrySummary} {$category} {$submitter}</li>";
+                }
+                ?>
+            </ul>
         </content>
     </section>
     </div>
