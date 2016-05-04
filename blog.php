@@ -41,7 +41,7 @@ include("dbconnect.php");
                 finish them all</p><br>
             <h3>University Lecturer by Brian</h3><br>
             <h5>University</h5><br>
-            <p>This week in university I had an amazing lecture. I can’t remember the name of the lecturer but he was really
+            <p>This week in university I had an amazing lecture. I can't remember the name of the lecturer but he was really
                 really good.</p><br>
         </content>
     </section>
