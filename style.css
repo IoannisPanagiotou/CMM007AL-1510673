@@ -33,14 +33,15 @@ nav{
     float: left;
 }
 
-#con{
+
+p{
     width: 79%;
-    float: right;
+    float: left;
 }
 
 #logo{
     float: right;
-    width:140px;
+    width:240px;
 }
 
 footer{
