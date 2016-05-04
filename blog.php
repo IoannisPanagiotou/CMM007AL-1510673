@@ -45,7 +45,7 @@ include("dbconnect.php");
                     $entrySummary=$row["entrySummary"];
                     $category=$row["category"];
                     $submitter=$row["submitter"];
-                    echo "<li>{$entryTitle} <br> {$entrySummary} <br> {$category} <br> {$submitter}</li>";
+                    echo "<li>{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary} </li>";
                 }
                 ?>
             </ul>
