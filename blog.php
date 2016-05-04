@@ -52,7 +52,7 @@ include("dbconnect.php");
                 $entrySummary=$_GET["entrySummary"];
                 $category=$_GET["category"];
                 $submitter=$_GET["submitter"];
-                
+
                 echo $category;
                 $sql2="SELECT * FROM blogview WHERE category='$category'";
                 if ($category=="work"){
@@ -60,14 +60,7 @@ include("dbconnect.php");
                     echo "{$entryTitle} by {$submitter} <br> {$category} <br> {$entrySummary}<br><hr />";
                 }
 
-                $result2=mysqli_query($db,$sql2);
-                if (mysqli_num_rows($result2)>0)
-                {
-                    header("location: blog.php?category=".$category."");
-                }else
-                {
-                    echo "Incorrect category.";
-                }
+                
 
                 ?>
             </ul>
