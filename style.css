@@ -1,0 +1,51 @@
+header {
+    background-color: red;
+}
+
+h1 {
+    color: blue;
+    font-family: "verdana";
+}
+
+h2 {
+    color: red;
+    font-size: 12px;
+    font-family: 'Indie Flower', cursive;
+}
+
+#maincontent{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 560px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+}
+
+nav{
+    width: 20%;
+    float: left;
+}
+
+#con{
+    width: 79%;
+    float: right;
+}
+
+#logo{
+    float: left;
+    width:140px;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+    color: blueviolet;
+    background-color: greenyellow;
+}
