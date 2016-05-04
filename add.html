@@ -27,16 +27,25 @@
     <br><br>
     <content>
         <form>
-            Entry Title: <input type="text" name="name" required/><br>
-            Entry Summary: <textarea name="summary" required></textarea><br>
-            Category:
-            <select name="category" required>
-                <option value="politics">Politics</option>
-                <option value="sports">Sports</option>
-                <option value="technology">Technology</option>
-            </select>
-            <br>
-            Submitted By: <input type="text" name="submittedBy" required/><br>
+            <table>
+                <tr>
+                    <td>Entry Title:</td>
+                    <td><input type="text" name="name" required/></td>
+                </tr>
+                <tr>
+                    <td>Entry Summary:</td>
+                    <td><textarea name="summary" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Category:</td>
+                    <td><select name="category" required>
+                        <option value="politics">Politics</option>
+                        <option value="sports">Sports</option>
+                        <option value="technology">Technology</option>
+                        </select></td>
+                </tr>
+                <tr>Submitted By: <input type="text" name="submittedBy" required/></tr>
+            </table>
             <input type="submit" value="Submit" />
         </form>
     </content>
