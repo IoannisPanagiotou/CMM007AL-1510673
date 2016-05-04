@@ -37,8 +37,6 @@ include("dbconnect.php");
         <content>
             <ul>
                 <?
-                $category=$_GET["category"];
-
                 $sql_query = "select * from blogview";
                 $result = $db->query($sql_query);
                 while ($row = $result->fetch_array())
