@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>myBlog</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+<div id="maincontent">
+    <header>
+        <h1>myBlog</h1>
+        <h2>because the internet needs to know what I think</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="blog.html">All Blog Items</a></li>
+            <li><a href="blog.html">Work Items</a></li>
+            <li><a href="blog.html">University Items</a></li>
+            <li><a href="blog.html">Family Items</a></li>
+            <li><a href="add.html">Insert a Blog Item</a></li>
+        </ul>
+    </nav>
+    <br>
+    <content>
+        <form>
+            Entry Title: <input type="text" name="name" required/><br>
+            Entry Summary: <textarea name="summary" required></textarea><br>
+            Category:
+            <select name="category" required>
+                <option value="andr">Android</option>
+                <option value="ios">iOS</option>
+                <option value="win">Windows</option>
+            </select>
+            <br>
+            Submitted By: <input type="text" name="submittedBy" required/><br>
+            <input type="submit" value="Submit" />
+        </form>
+    </content>
+</div>
+<footer>
+    Designed by Ioannis Panagiotou, 2016
+</footer>
 </body>
 </html>
